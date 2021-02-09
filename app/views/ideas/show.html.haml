@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @idea.title
+%p
+  %strong Detail:
+  = @idea.detail
+= link_to 'Edit', edit_idea_path(@idea)
+|
+= link_to 'Back', ideas_path

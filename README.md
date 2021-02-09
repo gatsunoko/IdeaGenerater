@@ -1,0 +1,10 @@
+SECRET_KEY_BASE=<br/>
+SITE_URL=http://localhost<br/>
+DEVISE_SECRET_KEY=<br/>
+<br/>
+GOOGLE_APP_ID=<br/>
+GOOGLE_APP_SECRET=<br/>
+<br/>
+RAILS_ENV=development<br/>
+<br/>
+COMPOSE_FILE=docker-compose.development.yml<br/>

@@ -1,0 +1,7 @@
+- shareUrl = request.url.to_s
+.tweet.mx-5
+  %a.twitter-share-button{"data-size" => "large", "data-text" => "#{@original_idea.title}", "data-url" => shareUrl, :href => "https://twitter.com/share"} Tweet
+  %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+.line.mx-5
+  %a{href: "http://line.me/R/msg/text/?#{URI.escape("#{@original_idea.title} #{shareUrl}", Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"}
+    %img{src: "https://d.line-scdn.net/r/web/social-plugin/img/common/line_60.png", width: "30", height: "30",  alt: "LINEで送る"}

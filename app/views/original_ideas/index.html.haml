@@ -1,0 +1,9 @@
+%ul.stripe
+  - @original_ideas.each do |idea|
+    %li
+      = link_to idea.title, idea
+.paginate
+  .page_entries_info
+    = page_entries_info @original_ideas
+  .pagination
+    = paginate @original_ideas

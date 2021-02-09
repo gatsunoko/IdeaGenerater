@@ -1,0 +1,12 @@
+%h1.text-center.my-20.px-10
+  = @original_idea.title
+%p.text-center
+  この二つの名言から作られました。
+.idea_area
+  .display-flex.justify-center
+    - @original_idea.idea_chain_original_ideas.each do |chain|
+      .idea
+        %p
+          = chain.idea.title
+  .share.display-flex.justify-center.my-10
+    = render 'share_buttons'

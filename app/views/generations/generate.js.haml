@@ -1,0 +1,3 @@
+$('#ideas').html("#{escape_javascript(render 'generations/ideas', idea_1: @idea_1, idea_2: @idea_2)}");
+$('#idea_1_id').val("#{@idea_1.id}");
+$('#idea_2_id').val("#{@idea_2.id}");

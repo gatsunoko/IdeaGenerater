@@ -1,0 +1,18 @@
+- if @idea_2.present?
+  .text-center
+    =link_to '次のアイデア', generate_generations_path, remote: true, class: 'submit my-10'
+  .form.w-600px.max-w-100.margin-0-auto
+    = form_with(model: OriginalIdea, url: original_ideas_path, method: :post) do |form|
+      .field
+        = form.label :title, 'オリジナル名言'
+        = form.text_field :title, class: 'text_field w-100', onkeyup: "document.getElementById('characnt').value=200 - this.value.length"
+        %input{type:"text", id: "characnt", disabled: "disabled", class: 'characnt'}
+      = form.hidden_field :idea_1, value: @idea_1.id, id: 'idea_1_id'
+      = form.hidden_field :idea_2, value: @idea_2.id, id: 'idea_2_id'
+      .actions
+        = form.submit '投稿', class: 'submit my-10'
+  .idea_area
+    #ideas.display-flex.justify-center
+      = render 'generations/ideas', idea_1: @idea_1, idea_2: @idea_2
+    %p.text-center.my-10
+      二つの名言を組み合わせて、オリジナル名言を作ってください。
