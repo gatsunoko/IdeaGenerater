@@ -6,10 +6,10 @@
       .field
         = form.label :title, 'オリジナル名言'
         = form.text_field :title, class: 'text_field w-100', onkeyup: "document.getElementById('characnt').value=200 - this.value.length"
-        %input{type:"text", id: "characnt", disabled: "disabled", class: 'characnt'}
       = form.hidden_field :idea_1, value: @idea_1.id, id: 'idea_1_id'
       = form.hidden_field :idea_2, value: @idea_2.id, id: 'idea_2_id'
       .actions
+        %input{type:"text", id: "characnt", disabled: "disabled", class: 'characnt'}
         = form.submit '投稿', class: 'submit my-10'
   .idea_area
     #ideas.display-flex.justify-center

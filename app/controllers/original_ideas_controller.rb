@@ -16,10 +16,12 @@ class OriginalIdeasController < ApplicationController
     @original_idea.idea_chain_original_ideas.build(idea_id: params[:original_idea][:idea_1])
     @original_idea.idea_chain_original_ideas.build(idea_id: params[:original_idea][:idea_2])
 
-    if @original_idea.save!
+    if @original_idea.save
       redirect_to original_idea_path(@original_idea)
     else
-      render 'generaters/index'
+      @idea_1 = Idea.find params[:original_idea][:idea_1]
+      @idea_2 = Idea.find params[:original_idea][:idea_2]
+      render 'generations/index'
     end
   end
 

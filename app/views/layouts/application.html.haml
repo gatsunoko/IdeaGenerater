@@ -15,6 +15,8 @@
       .logo_area
         = link_to root_path do
           %img{:src => "http://placehold.it/200x50"}/
+        = link_to 'ジェネレート', generations_path
+        = link_to '一覧', original_ideas_path
       %nav#min_navbar.global-nav
         %ul.global-nav__list.categories
           - if user_signed_in?
