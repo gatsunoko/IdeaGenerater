@@ -8,10 +8,9 @@
         - idea.errors.each do |error|
           %li= error.full_message
   .field
-    = form.label :title, '名言'
-    = form.text_field :title, class: 'text_field'
-  .field
-    = form.label :detail, '詳細'
-    = form.text_area :detail, class: 'text_area'
+    = form.text_field :title, class: 'text_field w-100', placeholder: '名言'
+  -# .field
+  -#   = form.label :detail, '詳細'
+  -#   = form.text_area :detail, class: 'text_area'
   .actions
     = form.submit '保存', class: 'submit'
