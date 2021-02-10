@@ -330,7 +330,29 @@ table th, table td {
     }
   }
 }
-
+.search_form {
+  position: relative;
+  .search_text {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 12px;
+    border: 1px solid var(--color3);
+  }
+  .search_button {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    background: image-url("search_button.png") left top no-repeat;
+    border: 1px solid var(--color3);
+  }
+}
 .google_signed_link {
   padding: 4px;
   margin: 10px auto;

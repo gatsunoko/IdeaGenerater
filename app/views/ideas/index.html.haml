@@ -1,6 +1,10 @@
 %p#notice= notice
 %h1 Ideas
 = link_to '登録', new_idea_path, class: 'submit my-10'
+.search_form.my-10
+  = form_with(url: search_ideas_index_path, local: true, method: :get, class: 'search_form') do |f|
+    = f.text_field :keyword, value: params[:keyword], class: 'search_text', placeholder: '検索'
+    %input.search_button{:type => "submit", :value => ""}/
 %table
   %thead
     %tr

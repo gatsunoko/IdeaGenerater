@@ -171,6 +171,7 @@ GEM
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
     orm_adapter (0.5.0)
+    polyglot (0.3.5)
     public_suffix (4.0.6)
     puma (5.2.1)
       nio4r (~> 2.0)
@@ -230,6 +231,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    search_cop (1.1.0)
+      treetop
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -246,6 +249,8 @@ GEM
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
+    treetop (1.6.11)
+      polyglot (~> 0.3)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -291,6 +296,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
   sass-rails (>= 6)
+  search_cop (~> 1.1)
   selenium-webdriver
   spring
   tzinfo-data

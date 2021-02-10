@@ -29,6 +29,7 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'omniauth', '~> 1.9'
 gem 'omniauth-google-oauth2', '~> 0.8.0'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'search_cop', '~> 1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

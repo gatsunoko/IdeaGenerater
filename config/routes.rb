@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search_ideas/index'
   get 'original_ideas/index'
   get 'original_ideas/show'
   root 'generations#index'
